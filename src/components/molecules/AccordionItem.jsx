@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { cn } from "@/utils/cn";
 import ApperIcon from "@/components/ApperIcon";
 import Card from "@/components/atoms/Card";
+import { cn } from "@/utils/cn";
 
-const AccordionItem = ({ lesson, isExpanded, onToggle }) => {
+function AccordionItem({ lesson, isExpanded, onToggle, ...otherProps }) {
+  const [isAnimating, setIsAnimating] = useState(false);
+
   return (
-    <Card className="overflow-hidden">
+    <Card {...otherProps}>
       <button
         onClick={onToggle}
         className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -18,7 +20,7 @@ const AccordionItem = ({ lesson, isExpanded, onToggle }) => {
             {lesson.description}
           </p>
         </div>
-<ApperIcon
+        <ApperIcon
           name="ChevronDown"
           size={20}
           className={cn(
