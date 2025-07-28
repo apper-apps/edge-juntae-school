@@ -50,11 +50,11 @@ const FreeLibrary = () => {
       </div>
 
       <div className="space-y-4">
-        {lessons.map((lesson) => (
+{lessons.map((lesson) => (
           <AccordionItem
             key={lesson.Id}
             lesson={lesson}
-            isExpanded={expandedLesson === lesson.Id}
+            isExpanded={Boolean(expandedLesson === lesson.Id)}
             onToggle={() => handleToggleLesson(lesson.Id)}
           />
         ))}
