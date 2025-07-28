@@ -18,12 +18,12 @@ const AccordionItem = ({ lesson, isExpanded, onToggle }) => {
             {lesson.description}
           </p>
         </div>
-        <ApperIcon
+<ApperIcon
           name="ChevronDown"
           size={20}
           className={cn(
             "text-gray-400 transition-transform duration-200 ml-4",
-            isExpanded && "transform rotate-180"
+            isExpanded ? "transform rotate-180" : ""
           )}
         />
       </button>
