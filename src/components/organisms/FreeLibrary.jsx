@@ -54,7 +54,7 @@ const FreeLibrary = () => {
           <AccordionItem
             key={lesson.Id}
             lesson={lesson}
-            isExpanded={Boolean(expandedLesson === lesson.Id)}
+            isExpanded={expandedLesson === lesson.Id}
             onToggle={() => handleToggleLesson(lesson.Id)}
           />
         ))}
