@@ -1,0 +1,111 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.Toastify__toast-container {
+  top: 80px;
+  right: 20px;
+  width: 350px;
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  min-height: 48px;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #dc3545, #e83e8c);
+  color: white;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #17a2b8, #007bff);
+  color: white;
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14);
+  color: #1a1a1a;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.korean-text {
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lesson-content {
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.lesson-content h3 {
+  @apply text-lg font-semibold text-primary mb-3 mt-4 first:mt-0;
+}
+
+.lesson-content p {
+  @apply mb-3 text-gray-700;
+}
+
+.lesson-content ul {
+  @apply ml-4 mb-3;
+}
+
+.lesson-content li {
+  @apply mb-1 text-gray-700;
+  list-style-type: disc;
+}
+
+.lesson-content strong {
+  @apply font-semibold text-primary;
+}
+
+.accordion-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-enter-active {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.accordion-exit {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.accordion-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
